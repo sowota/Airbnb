@@ -29,10 +29,14 @@ export default function search() {
     //console.log(searchInput)
 
     const formattedStartDate = ()=>{
-        return format(new Date(startDate), 'yyyy-MM-dd')
+        if(startDate){
+            return format(new Date(startDate), 'yyyy-MM-dd')
+        }
     } 
     const formattedEndDate = () =>{
-        return format(new Date(endDate), 'yyyy-MM-dd')
+        if(endDate){
+            return format(new Date(endDate), 'yyyy-MM-dd')
+        }
     } 
 
 

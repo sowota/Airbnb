@@ -15,9 +15,16 @@ export default function Pagination() {
 
     const router = useRouter()
     const {location, locationId, numOfGuests, startDate, endDate} = router.query
-    const formattedStartDate = format(new Date(startDate), 'yyyy-MM-dd')
-    const formattedEndDate = format(new Date(endDate), 'yyyy-MM-dd')
-
+    const formattedStartDate = ()=>{
+      if(startDate){
+          return format(new Date(startDate), 'yyyy-MM-dd')
+      }
+    } 
+    const formattedEndDate = () =>{
+        if(endDate){
+            return format(new Date(endDate), 'yyyy-MM-dd')
+        }
+    } 
     //console.log(router.pathname) //search
     //console.log('first:' + pageNumber)   
 
