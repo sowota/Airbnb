@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.rdrDateRangePickerWrapper{
+    border-radius: 30%;
+}
+
+@layer components{
+    .button{
+        @apply px-4 py-2 border rounded-full cursor-pointer hover:shadow-lg active:scale-95 active:bg-gray-100 transition transform duration-100 ease-out;
+    }
+    .onHover{
+        @apply cursor-pointer hover:underline decoration-solid
+
+    }
+}
+
+
+
+.container{
+    display:flex;
+    gap:1rem;
+    justify-content:center;
+    align-items:center;
+    margin:2rem 0;
+}
+
+.page{
+    
+    padding: .5rem 1rem;
+    border-radius: 100%;
+    
+}
+
+.page:hover{
+    background-color: rgba(255, 235, 235, 0.849);
+}
+
+.page.active{
+    background-color: rgb(255, 196, 196);
+}
